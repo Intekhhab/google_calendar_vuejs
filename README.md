@@ -1,1 +1,1 @@
-# google_calendar_vuejs
+# Google Calendar Events Integration in VueJS 
