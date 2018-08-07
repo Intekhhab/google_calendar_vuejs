@@ -229,7 +229,7 @@
   }
 
 table {
-  font-size:1.5vw;
+  font-size:10px;
   border-collapse: separate;
     border-spacing: 5px 0px;
 }
