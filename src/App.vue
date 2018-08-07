@@ -1,33 +1,34 @@
 <template>
   <div id="app">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-xs"><img src="./assets/logo.png" class="logo"></div>
       </div>
-      <div class="row">
+      <div class="row mt10">
         <div class="col-xs header"></div>
       </div>
 
-      <!-- <div class="row">
-        <div class="col-12 col-sm-12">
-          <button type="button" class="btn btn-primary auth-btn" @click="redirectToAuth">Sync Google calendar</button>
-          <router-link to="/oauth">Sync Google calendar</router-link>
-        </div>
-      </div> -->
       
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
+    <footer-component id="footer"></footer-component>
   </div>
 </template>
 
 <script>
-import OAuth from './components/oauth.vue'
-import router from 'vue-router';
+import OAuth from './components/oauth.vue';
+import FooterComponent from './components/footer.vue';
+
+
 export default {
     data() {
         return {
 
         }
+    },
+
+    components: {
+      FooterComponent
     },
 
     methods: {
@@ -40,6 +41,9 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #f6f6f6;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -49,11 +53,47 @@ export default {
 }
 .logo {
   
-  height: 200px;
+  width: 200px;
 }
 .header {
   width: 100%;
-  background: url(./assets/header.png)
+  background: url(./assets/header.png);
+  height: 75px;
 }
+
+.footer {
+  background: url(./assets/footer.png) no-repeat;
+  background-size: 100%;
+  color: #fff;
+}
+
+.cal-btn {
+  background: #0054a5;
+  border-radius: 30px;
+}
+
+.social_link {
+  width: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+
+.mtm20 {
+  margin-top: -20px;
+}
+
+.pl50 {
+  padding-left: 50px;
+}
+
 @import'~bootstrap/dist/css/bootstrap.css'
 </style>
