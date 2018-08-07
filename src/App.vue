@@ -41,6 +41,13 @@ export default {
 </script>
 
 <style>
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
 body {
   background-color: #f6f6f6;
 }
@@ -50,6 +57,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  min-height:100%;
+  position:relative;
 }
 .logo {
   
@@ -62,9 +71,22 @@ body {
 }
 
 .footer {
-  background: url(./assets/footer.png) no-repeat;
-  background-size: 100%;
+  background: #faa80f url(/img/footer.eb0858c7.png) no-repeat;
   color: #fff;
+  background-size: cover;
+  padding: 20px 0 10px 20px;
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+
+.footer ul li a {
+  display: inline-block;
+  padding-top: 5px;
+}
+
+.social-link-footer-container a {
+  margin: 10px;
 }
 
 .cal-btn {
@@ -93,6 +115,10 @@ ul {
 
 .pl50 {
   padding-left: 50px;
+}
+
+.txt-align-left {
+  text-align: left;
 }
 
 @import'~bootstrap/dist/css/bootstrap.css'
