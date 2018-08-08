@@ -1,15 +1,18 @@
 <template>
-  <div id="app">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs"><img src="./assets/logo.png" class="logo"></div>
-      </div>
-      <div class="row mt10">
-        <div class="col-xs header"></div>
-      </div>
+  <div class="body-container">
+    <div id="app">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs"><img src="./assets/logo.png" class="logo"></div>
+        </div>
+        <div class="row mt10">
+          <div class="col-xs header"></div>
+        </div>
 
+        
+        <router-view></router-view>
+      </div>
       
-      <router-view></router-view>
     </div>
     <footer-component id="footer"></footer-component>
   </div>
@@ -41,27 +44,31 @@ export default {
 </script>
 
 <style>
-html,
-body {
-  margin:0;
-  padding:0;
-  height:100%;
+html {
+  height: 100%;
 }
-
 body {
   background-color: #f6f6f6;
+  margin:0;
+  padding:0;
 }
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  min-height:100%;
-  position:relative;
+  flex: 1 0 auto;
 }
-.logo {
-  
+
+.logo {  
   width: 200px;
 }
 .header {
@@ -75,9 +82,7 @@ body {
   color: #fff;
   background-size: cover;
   padding: 20px 0 10px 20px;
-  position:absolute;
-  bottom:0;
-  left:0;
+  flex-shrink: 0;
 }
 
 .footer ul li a {

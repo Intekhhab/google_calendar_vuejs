@@ -248,6 +248,25 @@ td:first-child {
 .table thead th {
     border: none;
 }
+
+.table tbody tr:first-child td:nth-child(2) {
+    border-radius: 7px 7px 0 0;
+    border: 1px solid blue;
+    border-bottom: none;
+}
+
+.table tbody td:nth-child(2) {
+  border-left: 1px solid blue;
+  border-right: 1px solid blue;
+}
+
+.table tbody tr:last-child td:nth-child(2) {
+    border-radius: 0 0 7px 7px;
+    border: 1px solid blue;
+    border-top: none;
+}
+
+
 </style>
 
 <template>
